@@ -91,7 +91,7 @@ export default class Presentation extends React.Component {
           <Slide bgImage={images.amsterdam.replace("/", "")}>
             <Heading margin="0px 0px 0px" 
                      textColor='#404040'>
-              The productive developer guide to Angular 2
+              The Productive Developer Guide to React
             </Heading>
             <Image src={images.ng2.replace("/", "")} />
           </Slide>
