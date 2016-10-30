@@ -38,8 +38,9 @@ require("prismjs");
 require("prismjs/components/prism-typescript");
 
 const images = {
-  // techdays2016: require("../assets/images/techdays2016.png"),
-  // techdays2016title: require("../assets/images/techdays2016title.png"),
+  react: require('../assets/images/react.png'),
+
+
   gdgDevfestNL: require('../assets/images/gdg-devfest-nl-dark.png'),
   amsterdam: require('../assets/images/amsterdam.jpg'),
   title: require("../assets/images/title.png"),
@@ -72,7 +73,21 @@ const theme = createTheme({
   primary: "#ffffff"
 });
 
+// What is React
+// Where does React come from
+// React versus Angular 
+// Create React App
+// JSX
+// Components
+// ReactDOM
+// Server side rendering
+// Props
+// State
+// Presentational versus Container Components
+// Event handling
 
+// Flux
+// Redux/MobX
 
 export default class Presentation extends React.Component {
   render() {
@@ -81,19 +96,14 @@ export default class Presentation extends React.Component {
         <Deck transition={["fade"]}
               transitionDuration={500}
               progress='bar'>
-              
-          <Slide bgImage={images.amsterdam.replace("/", "")}>
-            <Image src={images.gdgDevfestNL.replace("/", "")}
-                   width="800px"/>
-            <Image src={images.ng2.replace("/", "")} />
-          </Slide>
-          
+         
           <Slide bgImage={images.amsterdam.replace("/", "")}>
             <Heading margin="0px 0px 0px" 
                      textColor='#404040'>
               The Productive Developer Guide to React
             </Heading>
-            <Image src={images.ng2.replace("/", "")} />
+            <Image src={images.react.replace("/", "")} 
+                   height="300px" />
           </Slide>
 
           <Slide bgImage={images.maurice.replace("/", "")}>
