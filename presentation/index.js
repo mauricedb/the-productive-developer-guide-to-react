@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   Deck,
   Fill,
   Heading,
@@ -44,11 +45,12 @@ const images = {
 
 preloader(images);
 
-const theme = createTheme({primary: "#ffffff"});
+const theme = createTheme({
+  primary: "#ffffff",
+  secondary: 'lightgreen',
+  tertiary: 'yellow'
+});
 
-// What is React Where does React come from React versus Angular Create React
-// App JSX Components ReactDOM Server side rendering Props State Presentational
-// versus Container Components Event handling Flux Redux/MobX
 
 export default class Presentation extends React.Component {
   render() {
@@ -56,23 +58,17 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["fade"]} transitionDuration={500} progress='bar'>
 
-          <Slide bgImage={images
-            .amsterdam
-            .replace("/", "")}>
+          <Slide bgImage={images.amsterdam.replace("/", "")}>
             <Heading margin="0px 0px 0px" textColor='#404040'>
               The Productive Developer Guide to React
             </Heading>
             <Image
-              src={images
-              .react
-              .replace("/", "")}
+              src={images.react.replace("/", "")}
               height="300px"/>
           </Slide>
 
-          <Slide bgImage={images
-            .maurice
-            .replace("/", "")}>
-            <Heading textColor='black'>
+          <Slide bgImage={images.maurice.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
               Who am I?
             </Heading>
             <List>
@@ -86,9 +82,47 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              What is React?
+            </Heading>
+            <Appear>
+              <Heading size={1} caps fit textColor="secondary">
+                a declarative, efficient, and flexible JavaScript library
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} caps fit textColor="tertiary">
+               for building user interfaces
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Where does React come from?
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Created at Facebook
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                Powers Facebook, Instagram, AirBNB and many more
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              React vs Angular
+            </Heading>
+          </Slide>
+
           <Slide
             notes="https://www.dreamstime.com/royalty-free-stock-image-cartoon-angry-army-drill-sergeant-shouting-image19836396">
-            <Heading textColor='black' textSize='5rem'>
+            <Heading size={1} caps fit textColor="black">
               Angular 2 is opinionated
             </Heading>
             <Image
@@ -100,12 +134,92 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
+            <Heading size={1} caps fit textColor="black">
+              React not so mutch
+            </Heading>
             <Image
               src={images
               .reactStarter
               .replace("/", "")}
               width="900px"/>
           </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Create-React-App
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                The official React starter project
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              JSX is the language of choice
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                It combines ECMAScript 2015 and HTML markup
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Components 
+            </Heading>
+          </Slide>
+          
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              ReactDOM 
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Server side rendering 
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Props & State 
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Presentational versus Container Components 
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Event handling 
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Flux 
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Redux/MobX
+            </Heading>
+          </Slide>
+
+          <Slide>
+            <Heading margin="0px 0px 0px" textColor='#404040'>
+            </Heading>
+          </Slide>
+
+
 
           <Slide>
             <Heading textColor='black'>
