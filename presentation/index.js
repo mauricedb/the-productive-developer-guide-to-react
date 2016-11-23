@@ -5,6 +5,7 @@ import React from "react";
 import {
   Appear,
   Deck,
+  CodePane,
   Fill,
   Heading,
   Image,
@@ -29,6 +30,8 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 require("prismjs");
+require("prismjs/components/prism-javascript");
+require("prismjs/components/prism-jsx");
 require("prismjs/components/prism-typescript");
 
 const images = {
@@ -41,6 +44,7 @@ const images = {
   reactStarter: require("../assets/images/react-starter.png"),
   createReactApp: require("../assets/images/create-react-app.png"),
   flux: require("../assets/images/flux.png"),
+  tree: require("../assets/images/tree.png"),
   lego: require("../assets/images/lego.png"),
   thanks: require("../assets/images/thanks.png")
 };
@@ -173,7 +177,7 @@ export default class Presentation extends React.Component {
 
           <CodeSlide
             transition={[]}
-            lang="typescript"
+            lang="jsx"
             code={require("raw!../assets/code/component.jsx.txt")}
             ranges={[
               {loc: [ 0, 255],title: "React JSX"}, 
@@ -184,11 +188,21 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="primary">
               Components 
             </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                The building blocks of a React application
+              </Heading>
+            </Appear>
+            <Appear>
+              <Image
+                src={images.tree.replace("/", "")}
+                width="450px"/>
+            </Appear>
           </Slide>
 
           <CodeSlide
             transition={[]}
-            lang="typescript"
+            lang="jsx"
             code={require("raw!../assets/code/component.jsx.txt")}
             ranges={[
               {loc: [ 0, 255],title: "React Components example"}, 
@@ -204,12 +218,34 @@ export default class Presentation extends React.Component {
             <Heading size={1} fit textColor="primary">
               ReactDOM 
             </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                ReactDOM renders the components into the DOM
+              </Heading>
+            </Appear>
+            <Appear>
+              <CodePane lang="javascript"
+                        source={require("raw!../assets/code/index.app.js.txt")}
+                        textSize="x-large"
+                        margin="20px auto"
+              />
+            </Appear>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Server side rendering 
             </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                ReactDOMServer can render the components as a string
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                Useful for server side rendering and SEO
+              </Heading>
+            </Appear>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
