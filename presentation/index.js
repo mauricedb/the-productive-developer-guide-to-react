@@ -250,6 +250,42 @@ export default class Presentation extends React.Component {
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
+              Components & Props 
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Props are inputs to components
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                They should never be updated
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="jsx"
+            code={require("raw!../assets/code/movie-list.jsx.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "Parent Components example"}, 
+              {loc: [ 6,   9],note: "Render child component with properties"},
+          ]}/>
+          
+          <CodeSlide
+            transition={[]}
+            lang="jsx"
+            code={require("raw!../assets/code/movie.jsx.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "Child Components example"}, 
+              {loc: [ 5,   6],note: "Read data from props"}, 
+              {loc: [21,  24],note: "Optionally declare expected properties"}, 
+          ]}/>
+          
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
               Props & State 
             </Heading>
           </Slide>

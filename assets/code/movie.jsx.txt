@@ -1,0 +1,26 @@
+import React, { Component, PropTypes } from 'react';
+import {path} from './config';
+
+class Movie extends Component {
+  render() {
+    const { movie } = this.props;
+
+    return (
+      <div className="movie">
+        <div className="title">
+          {movie.title}
+        </div>
+        <img className="backdrop"
+             alt={movie.title}
+             src={`${path}/${movie.backdrop_path}`}
+        />
+      </div>
+    );
+  }
+}
+
+Movie.propTypes = {
+  movie: PropTypes.object.isRequired
+};
+
+export default Movie;
