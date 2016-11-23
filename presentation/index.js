@@ -54,7 +54,7 @@ preloader(images);
 const theme = createTheme({
   primary: "#ffffff",
   secondary: 'lightgreen',
-  tertiary: 'yellow'
+  tertiary: 'yellow',
 });
 
 
@@ -270,7 +270,7 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/movie-list.jsx.txt")}
             ranges={[
               {loc: [ 0, 255],title: "Parent Components example"}, 
-              {loc: [ 6,   9],note: "Render child component with properties"},
+              {loc: [ 6,  10],note: "Render child component with properties"},
           ]}/>
           
           <CodeSlide
@@ -283,17 +283,81 @@ export default class Presentation extends React.Component {
               {loc: [21,  24],note: "Optionally declare expected properties"}, 
           ]}/>
           
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Components & State 
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Internal to a component
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                Can be used as props for a child component
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="jsx"
+            code={require("raw!../assets/code/movie-container.jsx.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "Stateful Components example"}, 
+              {loc: [ 7,  10],note: "Create initial state"}, 
+              {loc: [12,  18],note: "Use the componentDidMount() lifecycle method"}, 
+              {loc: [13,  14],note: "Execute an AJAX request"}, 
+              {loc: [16,  17],note: "Explicitly update the state using setState()"}, 
+              {loc: [22,  23],note: "Pass the state to a child component"}, 
+          ]}/>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
-              Props & State 
+              Presentation & Container Components 
             </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Keep responsibilities separate
+              </Heading>
+            </Appear>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
-              Presentational versus Container Components 
+              Presentation Components 
             </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Only concerned with rendering elements on screen
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                Takes all the input data as props
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Container Components 
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Do not directly render any elements on screen 
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                Contain all state management logic
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="lime">
+                Better yet: Use Redux or MobX
+              </Heading>
+            </Appear>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
@@ -317,56 +381,8 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide>
-            <Heading margin="0px 0px 0px" textColor='#404040'>
-            </Heading>
-          </Slide>
 
-
-
-          <Slide>
-            <Heading textColor='black'>
-              Building blocks
-            </Heading>
-            <Layout>
-              <Fill>
-                <List>
-                  <ListItem>Modules</ListItem>
-                  <ListItem>Components</ListItem>
-                  <ListItem>Templates</ListItem>
-                  <ListItem>Data binding</ListItem>
-                  <ListItem>Directives</ListItem>
-                  <ListItem>Services</ListItem>
-                  <ListItem>Routing</ListItem>
-                  <ListItem>Dependency injection</ListItem>
-                </List>
-              </Fill>
-              <Fill>
-                <Image
-                  src={images
-                  .lego
-                  .replace("/", "")}
-                  margin="40px auto 0px"
-                  width="460px"/>
-              </Fill>
-            </Layout>
-          </Slide>
-
-          <CodeSlide
-            transition={[]}
-            lang="typescript"
-            code={require("raw!../assets/code/app.module.ts")}
-            ranges={[
-              {loc: [ 0, 255],title: "Angular 2 main module"}, 
-              {loc: [28,  30],note: "An ECMA Script 2015 class"}, 
-              {loc: [12,  13],note: "The module decorator"}, 
-              {loc: [ 0,  11],note: "ECMA Script 2015 imports"}, 
-              {loc: [18,  23],note: "Other module dependencies"}, 
-              {loc: [13,  18],note: "Components declared by this module"}, 
-              {loc: [24,  27],note: "The root components to render"
-            }
-          ]}/>
-
+         
 
           <Slide notes="https://www.flickr.com/photos/ell-r-brown/7160371456">
             <Image
