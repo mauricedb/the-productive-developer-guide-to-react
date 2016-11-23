@@ -364,25 +364,25 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="primary">
               Event handling 
             </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                DOM events are exposed to components
+              </Heading>
+            </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
-            <Heading size={1} caps textColor="primary">
-              Flux 
-            </Heading>
-            <Image
-              src={images.flux.replace("/", "")}
-              width="900px"/>
-          </Slide>
-
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
-              Redux/MobX
-            </Heading>
-          </Slide>
-
-
-         
+          <CodeSlide
+            transition={[]}
+            lang="jsx"
+            code={require("raw!../assets/code/login-page.jsx.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "Event handling example"}, 
+              {loc: [32,  37],note: "Input element with change event handler"}, 
+              {loc: [15,  19],note: "The event handler"}, 
+              {loc: [38,  44],note: "A button with event handler"}, 
+              {loc: [20,  26],note: "The event handler"}, 
+              {loc: [10,  13],note: "Binding to the current instance"}, 
+          ]}/>
 
           <Slide notes="https://www.flickr.com/photos/ell-r-brown/7160371456">
             <Image
