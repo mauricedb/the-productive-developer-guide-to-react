@@ -12,6 +12,9 @@ import {
   Layout,
   List,
   ListItem,
+  BlockQuote,
+  Quote,
+  Cite,
   Slide,
   Spectacle,
   Text
@@ -36,7 +39,6 @@ require("prismjs/components/prism-typescript");
 
 const images = {
   react: require('../assets/images/react.png'),
-
   amsterdam: require('../assets/images/amsterdam.jpg'),
   title: require("../assets/images/title.png"),
   maurice: require("../assets/images/maurice1024.jpg"),
@@ -45,7 +47,6 @@ const images = {
   createReactApp: require("../assets/images/create-react-app.png"),
   flux: require("../assets/images/flux.png"),
   tree: require("../assets/images/tree.png"),
-  lego: require("../assets/images/lego.png"),
   thanks: require("../assets/images/thanks.png")
 };
 
@@ -92,6 +93,8 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="primary">
               What is React?
             </Heading>
+
+{/*
             <Appear>
               <Heading size={1} caps fit textColor="secondary">
                 a declarative, efficient, and flexible JavaScript library
@@ -102,6 +105,18 @@ export default class Presentation extends React.Component {
                for building user interfaces
               </Heading>
             </Appear>
+*/}
+          </Slide>
+
+          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+            <BlockQuote>
+              <Quote>
+                React is a JavaScript library for building user interfaces
+              </Quote>
+              <Cite>
+                Facebook
+              </Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
@@ -132,9 +147,7 @@ export default class Presentation extends React.Component {
               Angular 2 is opinionated
             </Heading>
             <Image
-              src={images
-              .sergeant
-              .replace("/", "")}
+              src={images.sergeant.replace("/", "")}
               margin="40px auto 0px"
               height="500px"/>
           </Slide>
@@ -386,9 +399,7 @@ export default class Presentation extends React.Component {
 
           <Slide notes="https://www.flickr.com/photos/ell-r-brown/7160371456">
             <Image
-              src={images
-              .thanks
-              .replace("/", "")}
+              src={images.thanks.replace("/", "")}
               width="900px"/>
             <Text>
               Maurice de Beijer - @mauricedb
