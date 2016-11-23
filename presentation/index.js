@@ -39,6 +39,8 @@ const images = {
   maurice: require("../assets/images/maurice1024.jpg"),
   sergeant: require("../assets/images/sergeant.png"),
   reactStarter: require("../assets/images/react-starter.png"),
+  createReactApp: require("../assets/images/create-react-app.png"),
+  flux: require("../assets/images/flux.png"),
   lego: require("../assets/images/lego.png"),
   thanks: require("../assets/images/thanks.png")
 };
@@ -138,9 +140,7 @@ export default class Presentation extends React.Component {
               React not so mutch
             </Heading>
             <Image
-              src={images
-              .reactStarter
-              .replace("/", "")}
+              src={images.reactStarter.replace("/", "")}
               width="900px"/>
           </Slide>
 
@@ -153,6 +153,11 @@ export default class Presentation extends React.Component {
                 The official React starter project
               </Heading>
             </Appear>
+            <Appear>
+              <Image
+                src={images.createReactApp.replace("/", "")}
+                width="450px"/>
+            </Appear>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
@@ -161,19 +166,42 @@ export default class Presentation extends React.Component {
             </Heading>
             <Appear>
               <Heading size={1} fit textColor="secondary">
-                It combines ECMAScript 2015 and HTML markup
+                It combines ECMAScript and HTML markup
               </Heading>
             </Appear>
           </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="typescript"
+            code={require("raw!../assets/code/component.jsx.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "React JSX"}, 
+              {loc: [ 4,  18],note: "Code with markup"} 
+          ]}/>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Components 
             </Heading>
           </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="typescript"
+            code={require("raw!../assets/code/component.jsx.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "React Components example"}, 
+              {loc: [ 0,   2],note: "ECMAScript imports"}, 
+              {loc: [25,  26],note: "ECMAScript exports"}, 
+              {loc: [ 3,   4],note: "ECMAScript classes"}, 
+              {loc: [ 4,  18],note: "The render() returns a React element. Transpiled into React.createElement()"}, 
+              {loc: [ 8,   9],note: "A few HTML attributes are renamed"}, 
+              {loc: [10,  11],note: "Curly braces wrap expressions"}, 
+          ]}/>
           
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               ReactDOM 
             </Heading>
           </Slide>
@@ -203,9 +231,12 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} caps textColor="primary">
               Flux 
             </Heading>
+            <Image
+              src={images.flux.replace("/", "")}
+              width="900px"/>
           </Slide>
 
           <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>

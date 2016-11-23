@@ -1,0 +1,26 @@
+import React, {Component} from 'react';
+import {path} from './config';
+
+class Billboard extends Component {
+  render() {
+    const movie = this.props.movie;
+    
+    return (
+      <div className="row">
+        <div className="title">
+          {movie.title}
+        </div>
+        <img className="img-responsive"
+             alt={movie.title}
+             src={`${path}/${movie.backdrop_path}`}
+        />
+      </div>
+    );
+  }
+}
+
+Billboard.propTypes = {
+  movie: PropTypes.object.isRequired,
+};
+
+export default Billboard;
