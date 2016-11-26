@@ -39,7 +39,7 @@ require("prismjs/components/prism-typescript");
 
 const images = {
   react: require('../assets/images/react.png'),
-  amsterdam: require('../assets/images/amsterdam.jpg'),
+  background: require('../assets/images/background.jpg'),
   title: require("../assets/images/title.png"),
   maurice: require("../assets/images/maurice1024.jpg"),
   sergeant: require("../assets/images/sergeant.png"),
@@ -58,6 +58,7 @@ const theme = createTheme({
   tertiary: 'yellow',
 });
 
+const bgImage = images.amsterdam.replace("/", "")
 
 export default class Presentation extends React.Component {
   render() {
@@ -65,7 +66,7 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["fade"]} transitionDuration={500} progress='bar'>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")}>
+          <Slide bgImage={bgImage}>
             <Heading margin="0px 0px 0px" textColor='#404040'>
               The Productive Developer Guide to React
             </Heading>
@@ -89,7 +90,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={ibgImage} xbgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               What is React?
             </Heading>
