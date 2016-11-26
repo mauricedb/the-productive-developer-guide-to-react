@@ -58,7 +58,7 @@ const theme = createTheme({
   tertiary: 'yellow',
 });
 
-const bgImage = images.amsterdam.replace("/", "")
+const bgImage = images.background.replace("/", "")
 
 export default class Presentation extends React.Component {
   render() {
@@ -90,7 +90,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide bgImage={ibgImage} xbgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               What is React?
             </Heading>
@@ -109,7 +109,7 @@ export default class Presentation extends React.Component {
 */}
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <BlockQuote>
               <Quote>
                 React is a JavaScript library for building user interfaces
@@ -120,7 +120,7 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Where does React come from?
             </Heading>
@@ -136,7 +136,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               React vs Angular
             </Heading>
@@ -162,7 +162,7 @@ export default class Presentation extends React.Component {
               width="900px"/>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Create-React-App
             </Heading>
@@ -178,7 +178,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               JSX is the language of choice
             </Heading>
@@ -198,7 +198,7 @@ export default class Presentation extends React.Component {
               {loc: [ 4,  18],note: "Code with markup"} 
           ]}/>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Components 
             </Heading>
@@ -228,7 +228,7 @@ export default class Presentation extends React.Component {
               {loc: [10,  11],note: "Curly braces wrap expressions"}, 
           ]}/>
           
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} fit textColor="primary">
               ReactDOM 
             </Heading>
@@ -246,7 +246,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Server side rendering 
             </Heading>
@@ -262,7 +262,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Components & Props 
             </Heading>
@@ -297,7 +297,7 @@ export default class Presentation extends React.Component {
               {loc: [21,  24],note: "Optionally declare expected properties"}, 
           ]}/>
           
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Components & State 
             </Heading>
@@ -326,7 +326,7 @@ export default class Presentation extends React.Component {
               {loc: [22,  23],note: "Pass the state to a child component"}, 
           ]}/>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Presentation & Container Components 
             </Heading>
@@ -337,7 +337,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Presentation Components 
             </Heading>
@@ -353,7 +353,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Container Components 
             </Heading>
@@ -374,7 +374,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-          <Slide bgImage={images.amsterdam.replace("/", "")} bgDarken={0.5}>
+          <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Event handling 
             </Heading>
