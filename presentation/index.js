@@ -155,7 +155,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading size={1} caps fit textColor="black">
-              React not so mutch
+              React not so much
             </Heading>
             <Image
               src={images.reactStarter.replace("/", "")}
