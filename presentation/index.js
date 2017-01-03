@@ -92,6 +92,23 @@ export default class Presentation extends React.Component {
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
+              Is React reactive?
+            </Heading>
+          </Slide>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              A functional React component
+            </Heading>
+            <CodePane lang="javascript"
+                      source={require("raw!../assets/code/functional.jsx.txt")}
+                      textSize="x-large"
+                      margin="20px auto"
+            />
+          </Slide>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
               What is React?
             </Heading>
 
@@ -131,11 +148,12 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <Heading size={1} fit textColor="tertiary">
-                Powers Facebook, Instagram, AirBNB and many more
+                Powers Facebook, Instagram, AirBNB, Zoover and many more
               </Heading>
             </Appear>
           </Slide>
 
+{/*
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               React vs Angular
@@ -161,6 +179,7 @@ export default class Presentation extends React.Component {
               src={images.reactStarter.replace("/", "")}
               width="900px"/>
           </Slide>
+*/}
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
@@ -189,6 +208,18 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              JSX = Code with markup
+            </Heading>
+            <CodePane lang="javascript"
+                      source={require("raw!../assets/code/functional.jsx.txt")}
+                      textSize="x-large"
+                      margin="20px auto"
+            />
+          </Slide>
+
+{/*
           <CodeSlide
             transition={[]}
             lang="jsx"
@@ -197,6 +228,7 @@ export default class Presentation extends React.Component {
               {loc: [ 0, 255],title: "React JSX"}, 
               {loc: [ 4,  18],note: "Code with markup"} 
           ]}/>
+*/}
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
@@ -397,6 +429,24 @@ export default class Presentation extends React.Component {
               {loc: [20,  26],note: "The event handler"}, 
               {loc: [10,  13],note: "Binding to the current instance"}, 
           ]}/>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} caps fit textColor="primary">
+              Is React reactive?
+            </Heading>
+            <Appear>
+              <Heading size={1} caps fit textColor="red">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                No!
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} caps fit textColor="tertiary">
+                But it's a great library for building user interfaces
+              </Heading>
+            </Appear>
+          </Slide>
 
           <Slide notes="https://www.flickr.com/photos/ell-r-brown/7160371456">
             <Image
