@@ -42,12 +42,13 @@ const images = {
   background: require('../assets/images/background.jpg'),
   title: require("../assets/images/title.png"),
   maurice: require("../assets/images/maurice1024.jpg"),
+  mapOperator: require("../assets/images/map-operator.png"),
   sergeant: require("../assets/images/sergeant.png"),
   reactStarter: require("../assets/images/react-starter.png"),
   createReactApp: require("../assets/images/create-react-app.png"),
   flux: require("../assets/images/flux.png"),
   tree: require("../assets/images/tree.png"),
-  thanks: require("../assets/images/thanks.png")
+  thanks: require("../assets/images/thanks.jpg")
 };
 
 preloader(images);
@@ -76,7 +77,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgImage={images.maurice.replace("/", "")} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               Who am I?
             </Heading>
             <List>
@@ -84,20 +85,41 @@ export default class Presentation extends React.Component {
               <ListItem>The Problem Solver</ListItem>
               <ListItem>Microsoft Azure MVP</ListItem>
               <ListItem>Freelance developer/instructor</ListItem>
-              <ListItem>Twitter: @mauricedb</ListItem>
+              <ListItem>Twitter: @mauricedb &amp; @React_Tutorial</ListItem>
               <ListItem>Web: http://www.TheProblemSolver.nl</ListItem>
               <ListItem>E-mail: maurice.de.beijer@gmail.com</ListItem>
             </List>
           </Slide>
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
-              Is React reactive?
+            <Heading size={1} fit textColor="primary">
+              is React reactive?
             </Heading>
           </Slide>
 
+          <Slide>
+            <Heading size={1} textColor="black">
+              RxJS map operator
+            </Heading>
+            <Image
+              src={images.mapOperator.replace("/", "")}
+              margin="20px auto"
+              width="900px"/>
+          </Slide>
+
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
+              RxJS example
+            </Heading>
+            <CodePane lang="javascript"
+                      source={require("raw!../assets/code/rx.js.txt")}
+                      textSize="x-large"
+                      margin="20px auto"
+            />
+          </Slide>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} fit textColor="primary">
               A functional React component
             </Heading>
             <CodePane lang="javascript"
@@ -137,6 +159,7 @@ export default class Presentation extends React.Component {
             </BlockQuote>
           </Slide>
 
+{/*
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Where does React come from?
@@ -153,7 +176,6 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
-{/*
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               React vs Angular
@@ -182,7 +204,7 @@ export default class Presentation extends React.Component {
 */}
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               Create-React-App
             </Heading>
             <Appear>
@@ -198,7 +220,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               JSX is the language of choice
             </Heading>
             <Appear>
@@ -209,7 +231,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               JSX = Code with markup
             </Heading>
             <CodePane lang="javascript"
@@ -231,11 +253,11 @@ export default class Presentation extends React.Component {
 */}
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               Components 
             </Heading>
             <Appear>
-              <Heading size={1} fit textColor="secondary">
+              <Heading size={1} fit textColor="secondary" margin="20px auto">
                 The building blocks of a React application
               </Heading>
             </Appear>
@@ -278,8 +300,9 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
 
+{/*}
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               Server side rendering 
             </Heading>
             <Appear>
@@ -293,18 +316,19 @@ export default class Presentation extends React.Component {
               </Heading>
             </Appear>
           </Slide>
+*/}
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               Components & Props 
             </Heading>
             <Appear>
-              <Heading size={1} fit textColor="secondary">
+              <Heading size={1} fit textColor="secondary" margin="20px auto">
                 Props are inputs to components
               </Heading>
             </Appear>
             <Appear>
-              <Heading size={1} fit textColor="tertiary">
+              <Heading size={1} fit textColor="tertiary" margin="20px auto">
                 They should never be updated
               </Heading>
             </Appear>
@@ -330,7 +354,7 @@ export default class Presentation extends React.Component {
           ]}/>
           
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
               Components & State 
             </Heading>
             <Appear>
@@ -339,7 +363,7 @@ export default class Presentation extends React.Component {
               </Heading>
             </Appear>
             <Appear>
-              <Heading size={1} fit textColor="tertiary">
+              <Heading size={1} fit textColor="tertiary" margin="20px auto">
                 Can be used as props for a child component
               </Heading>
             </Appear>
@@ -358,6 +382,7 @@ export default class Presentation extends React.Component {
               {loc: [22,  23],note: "Pass the state to a child component"}, 
           ]}/>
 
+{ /*}
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} caps fit textColor="primary">
               Presentation & Container Components 
@@ -429,9 +454,51 @@ export default class Presentation extends React.Component {
               {loc: [20,  26],note: "The event handler"}, 
               {loc: [10,  13],note: "Binding to the current instance"}, 
           ]}/>
+*/}
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
-            <Heading size={1} caps fit textColor="primary">
+            <Heading size={1} fit textColor="primary">
+              Redux
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                A predictable state container for JavaScript apps
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} fit textColor="primary">
+              Redux principels
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Single source of truth
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                State is read-only
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="lime">
+                Changes are made with pure functions
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="jsx"
+            code={require("raw!../assets/code/reducer.js.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "Redux reducer"}, 
+              {loc: [11,  19],note: "The state is never modified"}, 
+          ]}/>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} fit textColor="primary">
               Is React reactive?
             </Heading>
             <Appear>
@@ -442,21 +509,24 @@ export default class Presentation extends React.Component {
               </Heading>
             </Appear>
             <Appear>
-              <Heading size={1} caps fit textColor="tertiary">
-                But it's a great library for building user interfaces
-              </Heading>
+              <div>
+                <Heading size={1} fit textColor="secondary">
+                  But it's a great library for building user interfaces
+                </Heading>
+                <Heading size={1} fit textColor="tertiary">
+                  And Redux helps a lot
+                </Heading>
+              </div>
             </Appear>
           </Slide>
 
-          <Slide notes="https://www.flickr.com/photos/ell-r-brown/7160371456">
-            <Image
-              src={images.thanks.replace("/", "")}
-              width="900px"/>
-            <Text>
-              Maurice de Beijer - @mauricedb
-            </Text>
+          <Slide bgImage={images.thanks.replace("/", "")} notes="https://www.flickr.com/photos/stevendepolo/4582437563/">
+            <Appear>
+            <Heading size={1} fit textColor="black" margin="00px auto">
+              @mauricedb
+            </Heading>
+            </Appear>
           </Slide>
-
         </Deck>
       </Spectacle>
     );

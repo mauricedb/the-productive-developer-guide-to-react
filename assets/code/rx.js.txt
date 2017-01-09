@@ -1,0 +1,13 @@
+const Rx = require('rxjs');
+const fetch = require('node-fetch');
+const url = 'http://api.themoviedb.org/3/movie/top_rated';
+let movies = [];
+
+Rx.Observable
+  .range(1, 5)
+  .concatMap(page => 
+    fetch(`${url}?api_key=${process.env.API_KEY}&page=${page}`))
+  .flatMap(rsp => rsp.json())
+  .map(json => json.results) 
+  .scan((prev, current) => prev.concat(current))
+  .subscribe(item => movies = item);
