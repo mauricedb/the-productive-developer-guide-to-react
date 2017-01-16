@@ -499,6 +499,48 @@ export default class Presentation extends React.Component {
 
           <Slide bgImage={bgImage} bgDarken={0.5}>
             <Heading size={1} fit textColor="primary">
+              MobX
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Simple, scalable state management
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} fit textColor="primary">
+              MobX principels
+            </Heading>
+            <Appear>
+              <Heading size={1} fit textColor="secondary">
+                Single source of truth
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="tertiary">
+                State is observable
+              </Heading>
+            </Appear>
+            <Appear>
+              <Heading size={1} fit textColor="lime">
+                React components are observers
+              </Heading>
+            </Appear>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="jsx"
+            code={require("raw!../assets/code/mobx.js.txt")}
+            ranges={[
+              {loc: [ 0, 255],title: "MobX observers"}, 
+              {loc: [ 5,   9],note: "State is observable"}, 
+              {loc: [11,  12],note: "Components are observers"}, 
+          ]}/>
+
+          <Slide bgImage={bgImage} bgDarken={0.5}>
+            <Heading size={1} fit textColor="primary">
               Is React reactive?
             </Heading>
             <Appear>
@@ -514,7 +556,7 @@ export default class Presentation extends React.Component {
                   But it's a great library for building user interfaces
                 </Heading>
                 <Heading size={1} fit textColor="tertiary">
-                  And Redux helps a lot
+                  And MobX is reactive!
                 </Heading>
               </div>
             </Appear>
